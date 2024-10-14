@@ -101,7 +101,7 @@ class ProjectController extends Controller
             $form_data['image'] = $path;
         }
 
-        $forma_data['slug'] = Project::generateSlug($form_data['name']);
+        $form_data['slug'] = Project::generateSlug($form_data['name']);
         $project->update($form_data);
         return redirect()->route('admin.projects.index');
     }
